@@ -1,0 +1,12 @@
+;######### INICIO FIN IMPRESION ######
+G28 X0 ; X=0
+T0
+G92 E0
+G1 E29.0000 F500 ; Exp Ex1
+T1
+G92 E0
+G1 E29.0000 F500 ; Exp Ex2
+M104 S0 ; Off Extrusores
+M140 S0 ; Off cama 
+M84 ; Off motores
+; ###### FIN IMPRESION ##########
