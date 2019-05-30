@@ -1,0 +1,96 @@
+
+########## Verificado #########
+
+G90 ; Comienzo Scripts inicio
+M82
+M106 S0 ; Ventilador off
+M140 S30 ; Calentar cama
+M190 S30 ; Comprobaci�n cama
+M104 S193 T0  ; Calentar extrusor Ex1
+M104 S193 T1 ; Calentar extrusor Ex2
+G28 X0 Y0 ; home  X=0 Y=0 
+T1
+G92 E0
+M109 S193 T1 ;  Comprobaci�n temperatura Ex2
+G1 E18.0000 F400
+G92 E0
+G1 E-26.0000 F1500 ; Rectr Cambio cabezal
+G92 E0
+G1 E-1.0000 F5700 ; Extr Cambio Cabezal
+G28 Z0; home  Z=0
+T0
+G92 E0
+M109 S193 T0 ; Comprobaci�n temperatura Ex1
+G1 E18.0000 F400 ; Expulsion limpieza Ex1
+G92 E0 ; Final Inicio
+G1 Z0.184 F1002
+; process Process5_C_1
+; layer 1, Z = 0.184
+M106 S0
+; tool H0.200 W0.490
+; inner perimeter
+G1 X36.644 Y154.334 F3600
+G1 E0.0000 F1710
+
+################ sin verificar ####################
+
+G90
+M82
+M140 S30
+M190 S30
+M104 S191 T0
+M104 S191 T1
+M109 S191 T0
+M109 S191 T1
+G90 ; Comienzo Scripts inicio
+M82
+M106 S0 ; Ventilador off
+M140 S30 ; Calentar cama
+M190 S30 ; Comprobación cama
+M104 S193 T0  ; Calentar extrusor Ex1
+M104 S193 T1 ; Calentar extrusor Ex2
+G28 X0 Y0 ; home  X=0 Y=0 
+T1
+G92 E0
+M109 S193 T1 ;  Comprobación temperatura Ex2
+G1 E18.0000 F400
+G92 E0
+G1 E-26.0000 F1500 ; Rectr Cambio cabezal
+G92 E0
+G1 E-1.0000 F5700 ; Extr Cambio Cabezal
+G28 Z0; home  Z=0
+T0
+G92 E0
+M109 S193 T0 ; Comprobación temperatura Ex1
+G1 E18.0000 F400 ; Expulsion limpieza Ex1
+G92 E0 ; Final Inicio
+G92 E0
+G1 E-4.5500 F5700
+G1 Z0.184 F1002
+; process Process5_C_1
+; layer 1, Z = 0.184
+M106 S0
+ ;INICIO CAMBIO CABEZAL
+G92 E0
+G1 E-26.0000 F1500 ; Rectr Cambio cabezal
+G92 E0
+G1 E-1.0000 F5700 ; Extr Cambio Cabezal
+G28 X0
+T1
+G92 E0
+G1 E29.0000 F1500 ; Extr Cambio Cabezal
+G92 E0
+G1 E-4.5500 F5700 ; Rectr Cambio Cabezal
+G92 E0
+;FIN CAMBIO CABEZAL
+T0 
+; tool H0.200 W0.490
+; inner perimeter
+G1 X36.644 Y154.334 F3600
+G1 E0.0000 F1710
+G92 E0
+G1 X55.175 Y154.334 E0.6790 F1890
+
+
+###################
+Esto es por la generación del codigo de su programa, verifique siempre el inicio ;)
