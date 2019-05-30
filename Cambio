@@ -1,0 +1,13 @@
+; ####### INICIO CAMBIO CABEZAL #############
+G92 E0
+G1 E-26.0000 F1500 ; Rectr Cambio cabezal
+G92 E0
+G1 E-1.0000 F5700 ; Extr Cambio Cabezal
+G28 X0
+T1
+G92 E0
+G1 E29.0000 F1500 ; Extr Cambio Cabezal
+G92 E0
+G1 E-4.5500 F5700 ; Rectr Cambio Cabezal
+G92 E0
+; ######### FIN CAMBIO CABEZAL #########
